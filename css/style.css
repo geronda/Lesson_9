@@ -1,0 +1,506 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"),
+    url("../fonts/Gilroy-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2"),
+    url("../fonts/Gilroy-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLightItalic.woff2") format("woff2"),
+    url("../fonts/Gilroy-UltraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+ol li,
+ul li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* -------------- */
+
+.main {
+  max-width: 1140px;
+  margin: 130px auto 0px;
+  text-align: center;
+}
+
+.footer {
+  height: 80px;
+  background-color: rgb(236, 192, 137);
+}
+
+.headertitle {
+  width: 100%;
+  font-size: 25px;
+  padding: 40px 0px 40px 0px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  text-shadow: 2px 2px 3px black;
+  text-align: center;
+  position: fixed;
+  background-color: rgb(236, 192, 137);
+  z-index: 100;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 500;
+  margin: 20px 0px 20px 0px;
+}
+
+.navigation {
+  margin: 30px auto;
+  max-width: 400px;
+  /* box-shadow: 0px 0px 10px #87b0ee; */
+}
+.nav li {
+  display: inline-block;
+  margin: 30px 40px 30px 40px;
+}
+
+.navlink,
+.navlink1 {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background-color: rgba(0, 0, 255, 0.527);
+  box-shadow: 0px 6px 0px rgba(0, 0, 255, 0.815);
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.navlink:hover,
+.navlink1:hover {
+  box-shadow: 0px 6px 0px rgba(0, 0, 255, 0.815);
+}
+.navlink:active,
+.navlink1:active {
+  background-color: rgba(0, 128, 0, 0.692);
+  box-shadow: 0px 2px 0px rgb(0, 128, 0);
+}
+.navlink:hover::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0px 0px 0px 10px;
+}
+.navlink1:hover::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0px 10px 0px 0px;
+}
+.picture {
+  max-width: 1200px;
+  height: 500px;
+  margin: 30px auto;
+  position: relative;
+  /* background-color: cornsilk; */
+}
+.sky,
+.road,
+.trusk,
+.moon {
+  position: absolute;
+}
+
+.road {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(177, 167, 167);
+  z-index: 2;
+}
+.sky {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(80, 80, 155);
+  z-index: 1;
+}
+.trusk {
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  height: 400px;
+  z-index: 4;
+}
+.moon {
+  right: 10%;
+  top: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(80, 80, 155);
+  z-index: 3;
+  box-shadow: inset -15px -15px rgb(236, 198, 72);
+}
+.body {
+  position: relative;
+  width: 600px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: rgba(8, 151, 8, 0.993);
+  z-index: 5;
+}
+.logo {
+  top: 30px;
+  left: 50px;
+  position: absolute;
+  width: 500px;
+  height: 80px;
+  background-color: #fff;
+  border: 1px dotted rgba(0, 0, 0, 0.582);
+  z-index: 6;
+}
+.img {
+  position: relative;
+  top: 0;
+  left: 40px;
+  width: 60px;
+  /* height: 70px; */
+  z-index: 7;
+}
+.text {
+  position: absolute;
+  left: 150px;
+  text-align: left;
+  padding: 15px 0px 0px 15px;
+}
+.text p:first-child {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
+  color: rgba(51, 51, 51, 0.979);
+  text-shadow: 1px 1px 3px rgb(216, 92, 92);
+}
+.text p:last-child {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 0.705);
+}
+.text::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -145px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 14;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  top: 63px;
+  left: -145px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 14;
+}
+.text1::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 335px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 14;
+}
+.text1:after {
+  content: "";
+  position: absolute;
+  top: 63px;
+  left: 335px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 14;
+}
+.logoimg {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+}
+.html {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  left: 350px;
+  top: 140px;
+  position: absolute;
+  font-size: 45px;
+  font-weight: 800;
+  color: rgb(219, 72, 46);
+  text-shadow: 2px 2px 3px rgba(0, 60, 255, 0.767);
+  z-index: 7;
+}
+.css {
+  text-transform: uppercase;
+  position: absolute;
+  left: 200px;
+  top: 120px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(44, 44, 182, 0.787);
+  text-shadow: 2px 2px 2px rgb(223, 13, 13);
+  z-index: 7;
+}
+.js {
+  text-transform: uppercase;
+  position: absolute;
+  left: 50px;
+  top: 140px;
+  font-size: 35px;
+  font-weight: 900;
+  color: rgba(223, 226, 37, 0.918);
+  text-shadow: 2px 2px 2px rgba(25, 27, 2, 0.945);
+  z-index: 7;
+}
+.wheels {
+  top: 200px;
+  left: 70px;
+  position: absolute;
+}
+.wheel1 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: cornsilk;
+  z-index: 7;
+}
+.wheel2 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: #333;
+  z-index: 8;
+}
+.wheel3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 17px;
+  left: 17px;
+  border-radius: 50%;
+  background-color: rgba(155, 155, 153, 0.808);
+  z-index: 9;
+}
+
+.cabin {
+  position: relative;
+  top: -180px;
+  left: 605px;
+  width: 180px;
+  height: 180px;
+  border-radius: 0px 40px 10px 0px;
+  background-color: rgba(8, 151, 8, 0.993);
+  z-index: 10;
+}
+
+.window1 {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  background-color: bisque;
+  border: 2px solid gray;
+  box-shadow: inset 0px 0px 5px rgb(83, 72, 72);
+  z-index: 11;
+}
+.window2 {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  top: 10px;
+  left: 112px;
+  z-index: 12;
+  background-color: bisque;
+  border: 2px solid gray;
+  border-radius: 0px 30px 0px 0px;
+  box-shadow: inset 0px 0px 5px rgb(83, 72, 72);
+}
+.bumper {
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: 140px;
+  left: 170px;
+  background-color: black;
+  z-index: 9;
+}
+.wheels .wheel1:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 90px;
+}
+.wheels1 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.headlight {
+  position: absolute;
+  z-index: 8;
+  top: 142px;
+  left: 180px;
+  width: 250px;
+  height: 20px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.order {
+  opacity: 0.2;
+  position: fixed;
+  text-align: left;
+  top: 320px;
+  right: 200px;
+  width: 200px;
+  height: 110px;
+  border: 3px solid green;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 20;
+}
+.order:hover {
+  opacity: 1;
+}
+.fone {
+  width: 100%;
+}
+.imgfone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+}
+.imgfone img {
+  padding: 5px 0px 0px 5px;
+  width: 100%;
+}
+.fonetext {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  margin: 5px 0px 10px 5px;
+  width: 170px;
+  height: 45px;
+}
+.call {
+  position: absolute;
+  top: 60px;
+  left: 5px;
+  margin: 10px 0px 0px 0px;
+}
+.calltext {
+}
+.imgcall {
+}
